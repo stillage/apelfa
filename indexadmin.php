@@ -141,6 +141,60 @@ if($_SESSION['status'] !="login"){
 			</div>
 		</section>
 	<!-- CONTACT ENDS -->
+
+	<!-- TABLE -->
+	<section id="contact">
+		<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="content">
+		<div class="row">
+			<div class="col-md-6">
+			<div class="card" style="width: 180%" >
+				<div class="card-header">
+				<h2 class="card-category">Tabel Pelaporan Kerusakan Infrastruktur</h2>
+				<h4 class="card-title">Khusus Admin Apelfa</h4><br>
+				</div>
+				<div class="card-body">
+				<div class="table-responsive">
+					<table class="table text-left">
+					<thead class=" text-primary">
+						<th>No</th>
+						<th>Name Pengirim</th>
+						<th>Alamat Kerusakan</th>
+						<th>Tingkat Kerusakan</th>
+						<th>Gambar</th>
+						<th>Deskripsi</th>
+						<th></th>
+					</thead>
+					<tbody>
+						<?php $no = 1;?>
+						<tr>
+						<td><? $no++ ?></td>
+						<td>Dono</td>
+						<td>Jl Sukijan No. 76</td>
+						<td>Tinggi</td>
+						<td><img src="./images/bgsub.jpg" width="200" /></td>
+						<td>Luka lebam di pipi dan hatinya</td>
+						<td>
+								<button class="border-0 bg-transparent">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-upload" width="33" height="33" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+									<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+									<path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+									<line x1="12" y1="11" x2="12" y2="17" />
+									<polyline points="9 14 12 11 15 14" />
+									</svg>
+								</button>
+						</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- TABLE ENDS -->
 	
 	<!-- FOOTER -->
 		<footer id="footer">

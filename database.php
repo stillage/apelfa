@@ -2,7 +2,7 @@
  
 	$server = "localhost";//nama server
 	$user = "root"; //username server
-	$pass = "";  //password
+	$pass = "123";  //password
 	$dbase = "apelfa"; // database yang dipakai
  
 	//Membuat koneksi
