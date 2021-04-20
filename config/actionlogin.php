@@ -22,6 +22,7 @@ $cekrole = mysqli_fetch_array($login);
 
 		session_start();
 		$_SESSION['nama'] = $cekrole['nama'];
+		$_SESSION['user_id'] = $cekrole['id'];
 		$_SESSION['status'] = "login";
 		header("location:../index.php");
 	}

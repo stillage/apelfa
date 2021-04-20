@@ -94,13 +94,13 @@ if($_SESSION['status'] !="login"){
 				<div class="row text-center">
 					<div class="col-md-8 col-md-offset-2">
 						<!-- CONTACT FORM -->
-						<form method="post" action="">
+						<form method="post" action="config/inputlaporan.php">
 							<p data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center"><b>Form Pelaporan Kerusakan Infrastruktur</b></p>
 							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Nama Tempat" />
+								<input type="text" class="form-control" id="name" name="nama_tempat" placeholder="Nama Tempat" />
 							</div>
 							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
-								<input type="file" class="form-control" id="gambar" name="gambar" placeholder="Upload Gambar" />
+								<input type="file" class="form-control" id="gambar" name="foto" placeholder="Upload Gambar" />
 							</div>
 							<div data-sr="enter right over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
 								<div class="form-group col-md-6">
@@ -132,7 +132,8 @@ if($_SESSION['status'] !="login"){
 								<textarea cols="60" rows="3" id="alamat" name="alamat" class="form-control" placeholder="Alamat Kerusakan"></textarea>
 							</div>
 							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
-								<button type="submit" class="button-leweb col-md-12">Kirim</button>
+								<input type="text" name="user_id" value="$_SESSION['id']">
+								<input type="submit" class="button-leweb col-md-12">Kirim</input>
 							</div>
 						</form>			
 						<!-- CONTACT FORM ENDS -->	
