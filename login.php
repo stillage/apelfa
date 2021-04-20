@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Apelfa - Register</title>
+		<title>Apelfa - Login</title>
 
 		
 		<!-- WEB FONTS -->
@@ -34,15 +34,14 @@
 				<i data-sr="ease-in over 1s, reset" class="fa fa-envelope icontop"></i>
 				<div class="row text-center">
 					<div class="col-md-8 col-md-offset-2">
-						<h2 data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="white-text">Daftar Akun</h2>
-						<h5 data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="white-text">Daftarkan Diri Anda Jika Belum Punya Akun</h5>
+						<h2 data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="white-text"><b>Login Akun</b></h2>
+						<h5 data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="white-text">Nikmati Layanan Kami untuk melaporkan kerusakan</h5>
 						<!-- MAILCHIMP FORM -->
-						<form id="mc_form" role="form">
-							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="email" class="form-control" id="mc-email" name="mc-email" placeholder="Email Anda"/><br><br>
-							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="password" class="form-control" id="mc-password" name="mc-password" placeholder="Password Anda" /><br><br>
-							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="number" class="form-control" id="mc-nik" name="mc-nik" placeholder="NIK Anda" /><br><br>
-							<button data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb">Daftar</button><br><br>
-							<a href="login.html">Sudah Punya Akun</a>
+						<form  action="config/actionlogin.php" method="POST">
+							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="number" class="form-control" id="mc-nik" name="nik" placeholder="NIK Anda" /><br><br>
+							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="password" class="form-control" id="mc-password" name="password" placeholder="Password Anda" /><br><br>
+							<input type="submit" data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb">Masuk</input><br><br>
+							<a href="register.php">Belum Punya Akun</a>
 							<label for="mc-email" class="mc-email"></label>
 						</form>
 						<!-- MAILCHIMP FORM ENDS -->
