@@ -42,8 +42,8 @@
 							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="text" class="form-control" id="mc-email" name="nama" placeholder="Email Anda"/><br><br>
 							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="password" class="form-control" id="mc-password" name="password" placeholder="Password Anda" /><br><br>
 							<input type="hidden" name="role" value="user">
-							<input type="submit" data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb">Daftar</input><br><br>
-							<a href="login.html">Sudah Punya Akun</a>
+							<input type="submit" data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb"></input><br><br>
+							<a href="login.php">Sudah Punya Akun</a>
 							<label for="mc-email" class="mc-email"></label>
 						</form>
 						<!-- MAILCHIMP FORM ENDS -->

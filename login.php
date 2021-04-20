@@ -40,7 +40,7 @@
 						<form  action="config/actionlogin.php" method="POST">
 							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="number" class="form-control" id="mc-nik" name="nik" placeholder="NIK Anda" /><br><br>
 							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="password" class="form-control" id="mc-password" name="password" placeholder="Password Anda" /><br><br>
-							<input type="submit" data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb">Masuk</input><br><br>
+							<input type="submit" data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb"></input><br><br>
 							<a href="register.php">Belum Punya Akun</a>
 							<label for="mc-email" class="mc-email"></label>
 						</form>
