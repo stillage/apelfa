@@ -3,7 +3,6 @@ include 'database.php';
 
 // mengaktifkan session
 session_start();
- 
 // cek apakah user telah login, jika belum login maka di alihkan ke halaman login
 if($_SESSION['status'] !="login"){
 	header("location:login.php");
@@ -36,11 +35,25 @@ if($_SESSION['status'] !="login"){
 	</head>
 	
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+		</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	<ul class="navbar-nav mr-auto">
+        	<a class="nav-link" href="index.php">Home &nbsp;</a>
+        	<a class="nav-link" href="./config/logout.php">Logout &nbsp;</a>
+    	</ul>
+	</div>
+</nav>
+
 	<!-- PRELOADER -->
 		<div id="loader-wrapper">
 			<div id="loader"><div class="sk-spinner sk-spinner-cube-grid"><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div></div></div>
-		</div>	
-		
+		</div>
 	<!-- HEADER -->
 		<section id="header">
 			<div class="container">
@@ -95,7 +108,7 @@ if($_SESSION['status'] !="login"){
 					<div class="col-md-8 col-md-offset-2">
 						<!-- CONTACT FORM -->
 						<form method="post" action="config/inputlaporan.php"  enctype="multipart/form-data"> 
-							<p data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center"><b>Form Pelaporan Kerusakan Infrastruktur</b></p>
+							<p data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center"><b>Form Pelaporan Kerusakan Infrastruktur</b></p><br>
 							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
 								<input type="text" class="form-control" id="name" name="nama_tempat" placeholder="Nama Tempat" />
 							</div>
@@ -146,12 +159,12 @@ if($_SESSION['status'] !="login"){
 	<!-- TABLE -->
 	<section id="contact">
 		<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="content">
-		<div class="row">
+		<div class="row justify-content-center">
 			<div class="col-md-6">
 			<div class="card" style="width: 180%" >
 				<div class="card-header">
 				<h2 class="card-category">Tabel Pelaporan Kerusakan Infrastruktur</h2>
-				<h4 class="card-title">Khusus Admin Apelfa</h4><br>
+				<h4 class="card-title">Detail Dari Laporan</h4><br>
 				</div>
 				<div class="card-body">
 				<div class="table-responsive">
@@ -210,7 +223,7 @@ if($_SESSION['status'] !="login"){
 			<div class="container">
 				<div class="row text-center">	
 					<p>
-						&copy; 2021 Apelfa | Design By <a href="http://site.alt-on.net">Alton</a>
+						&copy; 2021 Apelfa | Design By <a href="https://www.instagram.com/still.age/">Stillage & </a><a href="https://www.instagram.com/_romadhani/">Dhani</a>
 						<span class="social">
 							<a href="#"><i class="fa fa-facebook-square"></i></a>
 							<a href="#"><i class="fa fa-twitter-square"></i></a> 
@@ -235,6 +248,5 @@ if($_SESSION['status'] !="login"){
 		<script src="js/scrollReveal.min.js"></script>
 		<!-- FUNCTIONS -->
 		<script src="js/functions.js"></script>
-
 </body>
 </html>

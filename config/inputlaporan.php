@@ -29,7 +29,7 @@ if(!in_array($ext,$ekstensi) ) {
 	document.location.href="../index.php"
 	</script>';	
 }else{
-	if($ukuran < 1044070){		
+	if($ukuran < 104407000){		
 		$xx = $rand.'_'.$filename;
 		move_uploaded_file($_FILES['foto']['tmp_name'], '../images/'.$rand.'_'.$filename);
 		$sql = "INSERT INTO pelaporan VALUES(NULL,'".$nama_tempat."','".$alamat."','".$tingkat_kerusakan."','".$jenis_kerusakan."','".$xx."','".$rincian."','".$tanggal_lapor."','".$user_id."')";

@@ -56,7 +56,7 @@
 			<div class="container">
 				<div class="row text-center">	
 					<p>
-						&copy; 2021 Apelfa | Design By <a href="http://site.alt-on.net">Alton</a>
+						&copy; 2021 Apelfa | Design By <a href="https://www.instagram.com/still.age/">Stillage & </a><a href="https://www.instagram.com/_romadhani/">Dhani</a>
 						<span class="social">
 							<a href="#"><i class="fa fa-facebook-square"></i></a>
 							<a href="#"><i class="fa fa-twitter-square"></i></a> 
