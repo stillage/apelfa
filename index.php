@@ -94,33 +94,33 @@ if($_SESSION['status'] !="login"){
 				<div class="row text-center">
 					<div class="col-md-8 col-md-offset-2">
 						<!-- CONTACT FORM -->
-						<form method="post" action="">
+						<form method="post" action="config/inputlaporan.php"  enctype="multipart/form-data"> 
 							<p data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center"><b>Form Pelaporan Kerusakan Infrastruktur</b></p>
 							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Nama Tempat" />
+								<input type="text" class="form-control" id="name" name="nama_tempat" placeholder="Nama Tempat" />
 							</div>
 							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
-								<input type="file" class="form-control" id="gambar" name="gambar" placeholder="Upload Gambar" />
+								<input type="file" class="form-control" id="gambar" name="foto" placeholder="Upload Gambar" />
 							</div>
 							<div data-sr="enter right over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
 								<div class="form-group col-md-6">
-									<select name="subject">
+									<select name="tingkat">
 										<option disabled="disabled" selected="selected">Tingkat kerusakan</option>
-										<option id="tingkat" name="tingkat">Tinggi</option>
-										<option id="tingkat" name="tingkat">Sedang</option>
-										<option id="tingkat" name="tingkat">Rendah</option>
+										<option  value="Tinggi">Tinggi</option>
+										<option  value="Sedang">Sedang</option>
+										<option  value="Rendah">Rendah</option>
 									</select>
 									<div class="select-dropdown"></div>
 								</div>
 								<div class="form-group col-md-6">
-									<select name="subject">
+									<select name="jenis">
 										<option disabled="disabled" selected="selected">Jenis Kerusakan</option>
-										<option id="jenis" name="jenis">Taman</option>
-										<option id="jenis" name="jenis">Tempat Sampah</option>
-										<option id="jenis" name="jenis">Jalan Raya</option>
-										<option id="jenis" name="jenis">Toilet Umum</option>
-										<option id="jenis" name="jenis">Rambu Lalu Lintas</option>
-										<option id="jenis" name="jenis">Trotoar</option>
+										<option value="Taman">Taman</option>
+										<option value="Tempat Sampah">Tempat Sampah</option>
+										<option value="Jalan Raya">Jalan Raya</option>
+										<option value="Toilet Umum">Toilet Umum</option>
+										<option value="Rambu Lalu Lintas">Rambu Lalu Lintas</option>
+										<option value="Trotoar">Trotoar</option>
 									</select>
 									<div class="select-dropdown "></div>
 								</div>
@@ -131,8 +131,9 @@ if($_SESSION['status'] !="login"){
 							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
 								<textarea cols="60" rows="3" id="alamat" name="alamat" class="form-control" placeholder="Alamat Kerusakan"></textarea>
 							</div>
+							<input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id'];?>">
 							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
-								<button type="submit" class="button-leweb col-md-12">Kirim</button>
+								<input type="submit" class="button-leweb col-md-12"></input>
 							</div>
 						</form>			
 						<!-- CONTACT FORM ENDS -->	
@@ -162,17 +163,24 @@ if($_SESSION['status'] !="login"){
 						<th>Tingkat Kerusakan</th>
 						<th>Gambar</th>
 						<th>Deskripsi</th>
+						<th>Action</th>
 						<th></th>
 					</thead>
 					<tbody>
-						<?php $no = 1;?>
+					<?php 
+						include "database.php";
+						$sql = "SELECT * FROM pelaporan";
+						$query = mysqli_query($koneksi, $sql);
+						$nomor = 1;
+						while($data = mysqli_fetch_array($query)){
+						?>
 						<tr>
-						<td><? $no++ ?></td>
-						<td>Dono</td>
-						<td>Jl Sukijan No. 76</td>
-						<td>Tinggi</td>
-						<td><img src="./images/bgsub.jpg" width="200" /></td>
-						<td>Luka lebam di pipi dan hatinya</td>
+						<td><?php echo $nomor++; ?></td>
+						<td><?php echo $data['nama_tempat']; ?></td>
+						<td><?php echo $data['alamat']; ?></td>
+						<td><?php echo $data['tingkat_kerusakan']; ?></td>
+						<td><img src="./images/<?php echo $data['foto'] ?>" width="200" /></td>
+						<td><?php echo $data['rincian']; ?></td>
 						<td>
 								<button class="border-0 bg-transparent">
 									<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-upload" width="33" height="33" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -185,6 +193,7 @@ if($_SESSION['status'] !="login"){
 								</button>
 						</td>
 						</tr>
+						<?php } ?>
 					</tbody>
 					</table>
 				</div>

@@ -39,7 +39,7 @@
 						<!-- MAILCHIMP FORM -->
 						<form method="POST" action="config/actionregister.php">
 							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="number" class="form-control" id="mc-nik" name="nik" placeholder="NIK Anda" /><br><br>
-							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="text" class="form-control" id="mc-email" name="nama" placeholder="Email Anda"/><br><br>
+							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="text" class="form-control" id="mc-email" name="nama" placeholder="Nama Anda"/><br><br>
 							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="password" class="form-control" id="mc-password" name="password" placeholder="Password Anda" /><br><br>
 							<input type="hidden" name="role" value="user">
 							<input type="submit" data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb"></input><br><br>

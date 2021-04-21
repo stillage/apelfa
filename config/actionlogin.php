@@ -13,12 +13,14 @@ $cekrole = mysqli_fetch_array($login);
 
 	if ($cek > 0) {
 
-		// if ($cekrole['role'] != 'user') {
+		if ($cekrole['role'] != 'user') {
 
-		// 	echo '<script>alert("Nik atau Password Salah !!!");
-		// 	document.location.href="../login.php"
-		// 	</script>';	
-		// }
+			session_start();
+			$_SESSION['nama'] = $cekrole['nama'];
+			$_SESSION['user_id'] = $cekrole['id'];
+			$_SESSION['status'] = "login";
+			header("location:../indexadmin.php");
+		}
 
 		session_start();
 		$_SESSION['nama'] = $cekrole['nama'];
