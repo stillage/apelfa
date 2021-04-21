@@ -36,7 +36,7 @@ CREATE TABLE `pelaporan` (
   `jenis_kerusakan` varchar(100) NOT NULL,
   `foto` varchar(50) NOT NULL,
   `rincian` varchar(100) NOT NULL,
-  `tanggal_lapor` date NOT NULL,
+  `tanggal_lapor` varchar(25) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
